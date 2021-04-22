@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePemohonTable extends Migration
+class CreatePesertaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,13 @@ class CreatePemohonTable extends Migration
      */
     public function up()
     {
-        Schema::create('pemohon', function (Blueprint $table) {
+        Schema::create('peserta', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama');
+            $table->string('nama_peserta');
+            $table->string('nik')->unique()->nullable();
+            $table->string('hp');
             $table->text('alamat');
-            $table->string('no_telepon');
-            // $table->unsignedBigInteger('kel_id');
-            // $table->unsignedBigInteger('kec_id');
-            // $table->unsignedBigInteger('kab_id');
-            // $table->unsignedBigInteger('prov_id');
-
+            $table->unsignedBigInteger('parent_id');
             $table->timestamps();
         });
     }
@@ -34,6 +31,6 @@ class CreatePemohonTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pemohon');
+        Schema::dropIfExists('peserta');
     }
 }
