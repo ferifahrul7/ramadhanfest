@@ -101,7 +101,7 @@
               <p>
                 Event Ramadhan Terbesar Di Pekalongan
               </p>
-              <a href="#aboutus" class="about-btn">About us <i class="bx bx-chevron-right"></i></a>
+              <a href="#aboutus" class="about-btn">Tentang Event <i class="bx bx-chevron-right"></i></a>
             </div>
           </div>
           <div class="col-xl-7 d-flex align-items-stretch" data-aos="fade-left">
@@ -204,7 +204,7 @@
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://wa.me/+6282250500588" class="whatsapp"><i class="bx bxl-whatsapp"></i></a> Info Booking Tenant (Faki)
+        <a href="https://wa.me/6282250500588" class="whatsapp"><i class="bx bxl-whatsapp"></i></a> Info Booking Tenant (Faki)
       </div>
     </div>
   </footer><!-- End Footer -->
