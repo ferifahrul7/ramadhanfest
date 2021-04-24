@@ -54,8 +54,8 @@
 
                 </div>
                 <div id="tambah_pengunjung">
-                    <button value="0" type="button" class="btn btn-success" id="btn_tambah_pengunjung">
-                        <i class="bx-bx-plus"></i> Tambah pengunjung
+                    <button value="0" type="button" class="btn btn-sm btn-success" id="btn_tambah_pengunjung">
+                        <i class="bx bx-bx-plus"></i> Tambah pengunjung
                     </button>
                 </div>
 

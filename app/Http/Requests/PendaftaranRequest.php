@@ -25,15 +25,15 @@ class PendaftaranRequest extends FormRequest
     {
         return [
             //personal
-            'nama_peserta' => 'required',
-            'nik' => 'required',
-            'alamat' => 'required',
-            'hp' => 'required',
+            'nama_peserta' => 'required|min:3',
+            'nik' => 'required|size:16',
+            'alamat' => 'required|min:4',
+            'hp' => 'required|min:8',
             //grup
-            'grup.*.nama_peserta' => 'required',
-            'grup.*.nik' => 'nullable',
-            'grup.*.alamat' => 'required',
-            'grup.*.hp' => 'required',
+            'grup.*.nama_peserta' => 'required|min:3',
+            'grup.*.nik' => 'nullable|size:16',
+            'grup.*.alamat' => 'required|min:4|max:190',
+            'grup.*.hp' => 'required|min:8',
         ];
     }
 }

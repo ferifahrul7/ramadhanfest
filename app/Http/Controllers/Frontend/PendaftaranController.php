@@ -15,6 +15,7 @@ class PendaftaranController extends Controller
 
     public function store(PendaftaranRequest $request)
     {
-        // dd($request->all());
+        
+        return response()->json(['status'=>'success','kode'=> '123']);
     }
 }

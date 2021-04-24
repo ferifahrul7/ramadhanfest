@@ -1,5 +1,4 @@
 <script>
-    "use strict"
     $(document).ready(function() {
         $('#grup').hide();
         $('#tambah_pengunjung').hide();
@@ -16,34 +15,22 @@
                 data: $('.form-input').serialize(),
                 dataType: "json",
                 success: function(data) {
-                    console.log(data)
-                    if (data.response !== null) {
-                        $('#tabel-message-success').show().html("<span class='text-success' id='success-sep'></span>");
-                        $('#success-sep').html(data.metaData.message + " No Sep :" + data.response).hide()
-                            .fadeIn(1500, function() {
-                                $('#success-sep')
-                            });
-                        setTimeout(clearMessage, 5000);
-                        // sementara load 
-                        ajaxLoad();
-                    } else {
-                        $('#tabel-message-error').show().html("<span class='text-success' id='error-sep'></span>");
-                        $('#error-sep').html(data.metaData.message + "Silahkan Cek kembali!").hide()
-                            .fadeIn(1500, function() {
-                                $('#error-sep');
-                            });
-                        setTimeout(clearMessage, 5000);
+                    // alert('xx');
+                    if (data.status == 'success') {
+                        alert('kode anda adalah :'+data.kode)
                     }
-                    $('#modal-sep').modal('hide');
                 },
                 error: function(xhr) {
                     $('.error-input').text('');
-                    $.each(xhr.responseJSON.errors, function(key, value) {
-                       let k=  key.replace(/\./g,'_');
-                       
-                        $('#err-' + k).addClass('text-danger').text(value);
-                        // $('#err-' + k).show();
-                    });
+                    console.log(typeof(xhr.responseJSON));
+                    if (typeof(xhr.responseJSON) == 'object') {
+                        $.each(xhr.responseJSON.errors, function(key, value) {
+                            let k = key.replace(/\./g, '_');
+
+                            $('#err-' + k).addClass('text-danger').text(value);
+                            // $('#err-' + k).show();
+                        });
+                    }
                 },
             })
         })
