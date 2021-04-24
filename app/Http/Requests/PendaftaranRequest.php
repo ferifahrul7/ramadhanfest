@@ -26,12 +26,12 @@ class PendaftaranRequest extends FormRequest
         return [
             //personal
             'nama_peserta' => 'required|min:3',
-            'nik' => 'required|size:16',
+            'nik' => 'required|size:16|unique:peserta,nik',
             'alamat' => 'required|min:4',
             'hp' => 'required|min:8',
             //grup
             'grup.*.nama_peserta' => 'required|min:3',
-            'grup.*.nik' => 'nullable|size:16',
+            // 'grup.*.nik' => 'nullable|size:16',
             'grup.*.alamat' => 'required|min:4|max:190',
             'grup.*.hp' => 'required|min:8',
         ];

@@ -19,7 +19,7 @@ class CreatePesertaTable extends Migration
             $table->string('nik')->unique()->nullable();
             $table->string('hp');
             $table->text('alamat');
-            $table->unsignedBigInteger('parent_id');
+            $table->unsignedBigInteger('parent_id')->nullable();
             $table->timestamps();
         });
     }
