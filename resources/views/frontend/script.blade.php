@@ -27,8 +27,8 @@
                             title: 'Berhasil Mendaftar!',
                             // text: "Kode Pendaftaran Anda adalah " + data.kode,
                             html: 'Kode Pendaftaran Anda adalah <h3 class="text-primary">' + data.kode + ' </h3>' +
-                                'Mohon untuk mengingat dan mencatat kode pendaftaran ' +
-                                'untuk ditunjukkan kepada Panitia.',
+                                'Mohon untuk mengingat dan mencatat kode pendaftaran.' +
+                                'Tunjukkan kode ini pada saat masuk dan keluar dari area festival',
                             icon: 'success',
                             confirmButtonText: 'Selesai!',
                             allowOutsideClick: false,

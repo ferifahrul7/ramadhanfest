@@ -165,13 +165,13 @@
           <div class="col-lg-3 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
             <span>02</span>
             <h5>Persiapkan Kode Pendaftaran Anda</h5>
-            <p>Tunjukkan kode tersebut kepada Panitia ketika akan menghadiri event.</p>
+            <p>Tunjukkan kode tersebut kepada Panitia ketika akan menghadiri festival.</p>
           </div>
 
           <div class="col-lg-3 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
             <span>03</span>
             <h5>Patuhi Protokol kesehatan</h5>
-            <p>Tetap patuhi protokol kesehatan saat mengikuti event.</p>
+            <p>Tetap patuhi protokol kesehatan saat mengikuti festival.</p>
           </div>
 
           <div class="col-lg-3 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
