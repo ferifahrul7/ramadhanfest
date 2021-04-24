@@ -26,7 +26,7 @@
                         swalWithBootstrapButtons.fire({
                             title: 'Berhasil Mendaftar!',
                             // text: "Kode Pendaftaran Anda adalah " + data.kode,
-                            html: 'Kode Pendaftaran Anda adalah <h4>' + data.kode + ' </h4>, ' +
+                            html: 'Kode Pendaftaran Anda adalah <h3 class="text-primary">' + data.kode + ' </h3>' +
                                 'Mohon untuk mengingat dan mencatat kode pendaftaran ' +
                                 'untuk ditunjukkan kepada Panitia.',
                             icon: 'success',
