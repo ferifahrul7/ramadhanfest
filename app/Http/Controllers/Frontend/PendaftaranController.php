@@ -46,7 +46,11 @@ class PendaftaranController extends Controller
 
     public function handleTransaksi($request)
     {
-        $grup = $request->grup;
+        if ($request->grup == null) {
+            $grup = 0;
+        } else {
+            $grup = count($request->grup);
+        }
         return
             [
                 'kode_transaksi' => $this->generateKode(),
