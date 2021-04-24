@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Http\Controllers\Frontend;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class PendaftaranController extends Controller
+{
+    public function create()
+    {
+        return view('frontend.pendaftaran');
+    }
+
+    public function store(Request $request)
+    {
+        dd($request->all());
+    }
+}

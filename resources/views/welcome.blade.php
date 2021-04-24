@@ -70,7 +70,7 @@
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="#" class="get-started-btn">Daftar Sekarang!</a>
+      <a href="{{ route('pendaftaran.create') }}" class="get-started-btn">Daftar Sekarang!</a>
 
     </div>
   </header><!-- End Header -->

@@ -13,9 +13,14 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Auth::routes();
+
+Route::group(['namespace' => 'Frontend'], function () {
+    Route::get('/pendaftaran', 'PendaftaranController@create')->name('pendaftaran.create');
+    Route::post('/pendaftaran', 'PendaftaranController@store')->name('pendaftaran.store');
+});
 
 Route::group(['namespace' => 'Backend', 'prefix' => 'admin'], function () {
     Route::get('/', 'HomeController@index')->name('home');
