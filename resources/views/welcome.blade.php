@@ -101,7 +101,7 @@
               <p>
                 Event Ramadhan Terbesar Di Pekalongan
               </p>
-              <a href="#aboutus" class="about-btn">Tentang Event <i class="bx bx-chevron-right"></i></a>
+              <a href="{{ route('pendaftaran.create') }}" class="get-started-btn">Daftar Sekarang!</a>
             </div>
           </div>
           <div class="col-xl-7 d-flex align-items-stretch" data-aos="fade-left">
@@ -178,7 +178,7 @@
           <p>Ikuti sosial media kami untuk mendapatkan informasi lebih lanjut.</p>
         </div>
         <div class="social-links text-center pt-3 pt-md-0">
-          <a href="https://instagram.com/ramadhanpekalonganfest" class="instagram"><i class="bx bxl-instagram"></i></a> Instagram 
+          <a href="https://instagram.com/ramadhanpekalonganfest" class="instagram"><i class="bx bxl-instagram"></i></a> Instagram
         </div>
       </div>
     </section><!-- End questions Section -->

@@ -19,8 +19,6 @@ class CreateTransaksiTable extends Migration
             $table->string('jenis_peserta');
             $table->string('status');
             $table->unsignedInteger('jumlah_peserta');
-            $table->uuid('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
             $table->timestamps();
         });
     }
