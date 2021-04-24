@@ -107,25 +107,40 @@
           <div class="col-xl-7 d-flex align-items-stretch" data-aos="fade-left">
             <div class="icon-boxes d-flex flex-column justify-content-center">
               <div class="row">
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <i class="bx bx-microphone"></i>
-                  <h4>Lomba Religi</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                   <i class="bx bx-cookie"></i>
-                  <h4>Festival Kuliner</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                  <h4>Culinary Festival</h4>
+                  <p>Menampilkan ragam makanan khas
+                    Pekalongan, khususnya makanan produk
+                    UMKM terbaik, untuk meningkatkan
+                    industri kuliner di Kota Pekalongan.</p>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
                   <i class="bx bx-laugh"></i>
                   <h4>Ngabuburit</h4>
-                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                  <p>Ngabuburit menjelang waktu berbuka puasa
+                    dengan menikmati hiburan musik, kesenian dan
+                    budaya Kota Pekalongan, dengan menerapkan
+                    protokol kesehatan dan sosial distancing antar
+                    pengunjung festival di area festival</p>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
                   <i class="bx bx-group"></i>
                   <h4>Expo</h4>
-                  <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                  <p>
+                    Menampilkan berbagai macam produk
+                    unggulan daerah yang berkualitas. Menjadi
+                    ajang promosi UMKM maupun multiproduk
+                    Kota Pekalongan setelah menurunnya
+                    perekonomian di tengah pandemi.
+                  </p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-microphone"></i>
+                  <h4>Lomba Religi</h4>
+                  <p>Menampilkan lomba-lomba religi anakanak dalam berbagai kategori, untuk
+                    manjadi wadah berkreasi dan berkreatif
+                    di tengah pandemi berlangsung</p>
                 </div>
               </div>
             </div><!-- End .content-->
