@@ -56,7 +56,7 @@ Admin Login
                         {!! Form::close() !!}
                     </div>
                 </div>
-                <div class="card text-white bg-info py-5 d-md-down-none  flex-row align-items-center" style="width:44%">
+                <div class="card text-white bg-secondary py-5 d-md-down-none  flex-row align-items-center" style="width:44%">
                     <div class="card-body text-center">
                         <div>
                             <img src="{{ asset('assets/img/logo/logo-full.png') }}" class="img-fluid" style="max-width:300px" alt="logo" />

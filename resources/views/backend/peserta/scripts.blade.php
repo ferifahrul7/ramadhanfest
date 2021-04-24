@@ -1,10 +1,10 @@
 <script>
-    var table = $('#tabel-pemohon').DataTable({
+    var table = $('#tabel-peserta').DataTable({
         processing: true,
         serverSide: true,
         responsive: true,
         scrollX: true,
-        ajax: '/admin/pemohon-ajax',
+        ajax: '/admin/peserta-ajax',
         columns: [{
                 data: 'DT_RowIndex',
                 orderable: false,
@@ -15,28 +15,16 @@
                 name: 'nama'
             },
             {
+                data: 'nik',
+                name: 'nik'
+            },
+            {
                 data: 'alamat',
                 name: 'alamat'
             },
             {
-                data: 'provinsi.nama_prov',
-                name: 'provinsi.nama_prov'
-            },
-            {
-                data: 'kabupaten.nama_kab',
-                name: 'kabupaten.nama_kab'
-            },
-            {
-                data: 'kecamatan.nama_kec',
-                name: 'kecamatan.nama_kec'
-            },
-            {
-                data: 'kelurahan.nama_kel',
-                name: 'kelurahan.nama_kel'
-            },
-            {
-                data: 'no_telepon',
-                name: 'no_telepon'
+                data: 'hp',
+                name: 'hp'
             },
             {
                 data: 'action',
@@ -68,7 +56,7 @@
                 className: 'btn btn-danger',
                 extend: 'pdf',
                 title: '',
-                messageTop: 'Data Pemohon',
+                messageTop: 'Data Peserta',
                 exportOptions: {
                     columns: ':visible:Not(.not-exported)',
                     rows: ':visible'
@@ -79,7 +67,7 @@
                 className: 'btn btn-success',
                 extend: 'excel',
                 title: '',
-                messageTop: 'Data Pemohon',
+                messageTop: 'Data Peserta',
                 exportOptions: {
                     columns: ':visible:Not(.not-exported)',
                     rows: ':visible'
@@ -90,7 +78,7 @@
                 className: 'btn btn-warning',
                 extend: 'print',
                 title: '',
-                messageTop: 'Data Pemohon',
+                messageTop: 'Data Peserta',
                 exportOptions: {
                     columns: ':visible:Not(.not-exported)',
                     rows: ':visible'
@@ -124,13 +112,13 @@
             if (result.value) {
                 ajaxDestroy(id);
             } else if (result.dismiss === Swal.DismissReason.cancel) {
-                swalWithBootstrapButtons.fire('Dibatalkan', 'Data pemohon terpilih batal di hapus :)', 'error')
+                swalWithBootstrapButtons.fire('Dibatalkan', 'Data peserta terpilih batal di hapus :)', 'error')
             }
         })
     })
 
     function ajaxDestroy(idx) {
-        var url = '/admin/ajax/pemohon/destroy',
+        var url = '/admin/ajax/peserta/destroy',
             method = 'DELETE';
 
         $.ajax({
@@ -146,14 +134,14 @@
                 } else {
                     swalWithBootstrapButtons.fire('Lapor!', res.message + '\nnama : ' + res.result.nama, 'success');
                 }
-                $('#tabel-pemohon').DataTable().ajax.reload();
+                $('#tabel-peserta').DataTable().ajax.reload();
             },
             error: function(xhr) {}
         });
     }
 
     function createData() {
-        $(".modal-title").html("Tambah Data Pemohon");
+        $(".modal-title").html("Tambah Data Peserta");
         $("#saveData").val("add");
         $("#saveData").html('<i class="fa fa-save"></i> Simpan');
         $("#formModal").modal("show");

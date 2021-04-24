@@ -23,10 +23,10 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin'], function () {
     //roles
     Route::resource('roles', 'RoleController');
 
-    //pemohon
-    Route::resource('pemohon', 'PemohonController');
-    Route::get('pemohon-ajax', 'PemohonController@indexAjax');
-    Route::delete('ajax/pemohon/destroy', 'PemohonController@destroyAjax');
+    //peserta
+    Route::resource('peserta', 'PesertaController');
+    Route::get('peserta-ajax', 'PesertaController@indexAjax');
+    Route::delete('ajax/peserta/destroy', 'PesertaController@destroyAjax');
 
     //user
     Route::resource('users', 'UserController');
