@@ -32,7 +32,7 @@ class PendaftaranRequest extends FormRequest
             //grup
             'grup.*.nama_peserta' => 'required|min:3',
             // 'grup.*.nik' => 'nullable|size:16',
-            'grup.*.alamat' => 'required|min:4|max:190',
+            'grup.*.alamat' => 'required|min:1|max:190',
             'grup.*.hp' => 'required|min:8',
         ];
     }

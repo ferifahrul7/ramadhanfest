@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\PendaftaranRequest;
 use App\Models\Peserta;
 use App\Models\Transaksi;
+use App\Models\TransaksiDetail;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -23,12 +24,17 @@ class PendaftaranController extends Controller
         DB::beginTransaction();
         try {
             $peserta = Peserta::create($data['parent']);
-            // $transaksiData = [
-            //     'jenis_peserta'
-            // ] 
+
+            $transaksiData = $this->handleTransaksi($request);
+            $transaksi = Transaksi::create($transaksiData);
+
             if ($request->jenis_pengunjung == 'grup') {
-                $peserta = Peserta::insert($data['child']);
+                $pesertaChild = Peserta::insert($data['child']);
             }
+
+            $transaksiDetailData = $this->handleTransaksiDetail($transaksi, $peserta);
+            $transaksiDetail = TransaksiDetail::insert($transaksiDetailData);
+
             DB::commit();
             return response()->json(['status' => 'success', 'kode' => '123']);
         } catch (Exception $e) {
@@ -38,6 +44,51 @@ class PendaftaranController extends Controller
         // return response()->json(['status' => 'success', 'kode' => '123']);
     }
 
+    public function handleTransaksi($request)
+    {
+        $grup = count($request->grup);
+        return
+            [
+                'kode_transaksi' => $this->generateKode(),
+                'status' => 'pendaftaran',
+                'jenis_peserta' => $request->jenis_pengunjung,
+                'jumlah_peserta' => ($request->jenis_pengunjung == 'personal') ? 1 : $grup + 1,
+            ];
+    }
+
+    public function generateKode()
+    {
+        $kode =  rand(10000, 99999);
+        $check = Transaksi::where('kode_transaksi', $kode)->first();
+        if ($check) {
+            return $this->generateKode();
+        }
+        return $this->attributes['kode_transaksi'] = $kode;
+    }
+
+    public function handleTransaksiDetail($header, $pesertaParent)
+    {
+        $pesertaChild = Peserta::where('parent_id', $pesertaParent->nik)->get();
+
+        $detail[] = [
+            'transaksi_id' => $header->id,
+            'peserta_id' => $pesertaParent->id,
+            'created_at' => now(),
+            'updated_at' => now()
+        ];
+
+        if (count($pesertaChild) > 0) {
+            foreach ($pesertaChild as $peserta)
+                $detail[] = [
+                    'transaksi_id' => $header->id,
+                    'peserta_id' => $peserta->id,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ];
+        }
+
+        return $detail;
+    }
 
     public function handleRequest($request)
     {
