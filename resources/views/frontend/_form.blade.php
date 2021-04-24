@@ -29,25 +29,25 @@
                     <div class="form-row">
                         <div class="col-md-12 form-group">
                             <label for="nama_peserta">Nama</label> <span class="text-danger">*</span>
-                            <input type="text" name="nama_peserta" class="form-control"  placeholder="Nama Lengkap" data-rule="required" data-msg="Mohon Isi Kolom Ini" />
-                            <div class="validate"></div>
+                            <input type="text" name="nama_peserta" class="form-control" placeholder="Nama Lengkap" data-rule="required" data-msg="Mohon Isi Kolom Ini" />
+                            <div class="error-input" id="err-nama_peserta"></div>
                         </div>
                         <div class="col-md-6 form-group">
                             <label for="nik">NIK</label> <span class="text-danger">*</span>
-                            <input type="nik" class="form-control" name="nik"  placeholder="NIK" data-rule="required;minlen:16" data-msg="Mohon isi nik dengan benar." />
-                            <div class="validate"></div>
+                            <input type="nik" class="form-control" name="nik" placeholder="NIK" data-rule="required;minlen:16" data-msg="Mohon isi nik dengan benar." />
+                            <div class="error-input" id="err-nik"></div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="alamat">Alamat</label> <span class="text-danger">*</span>
                         <textarea class="form-control" name="alamat" rows="5" data-rule="required" data-msg="Mohon Isi Alamat Lengkap" placeholder="Ketik Alamat"></textarea>
-                        <div class="validate"></div>
+                        <div class="error-input" id="err-alamat"></div>
                     </div>
                     <div class="form-group">
                         <label for="hp">No. Handphone</label> <span class="text-danger">*</span>
                         <input type="text" class="form-control" name="hp" placeholder="08xxxxxxxxx" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                         <small class="text-secondary">Nomor hp diawali dengan 0</small>
-                        <div class="validate"></div>
+                        <div class="error-input" id="err-hp"></div>
                     </div>
                 </div>
                 <div class="grup-block">
@@ -59,10 +59,10 @@
                     </button>
                 </div>
 
-                <div class="text-center"><button type="submit" class="btn btn-primary">Daftar</button></div>
+                <div class="text-center"><button type="button" id="btn_daftar" class="btn btn-primary">Daftar</button></div>
 
             </form>
-            
+
         </div>
     </div>
 </section>

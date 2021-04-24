@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PendaftaranRequest;
 use Illuminate\Http\Request;
 
 class PendaftaranController extends Controller
@@ -12,8 +13,8 @@ class PendaftaranController extends Controller
         return view('frontend.pendaftaran');
     }
 
-    public function store(Request $request)
+    public function store(PendaftaranRequest $request)
     {
-        dd($request->all());
+        // dd($request->all());
     }
 }
