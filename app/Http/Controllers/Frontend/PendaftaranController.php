@@ -36,7 +36,7 @@ class PendaftaranController extends Controller
             $transaksiDetail = TransaksiDetail::insert($transaksiDetailData);
 
             DB::commit();
-            return response()->json(['status' => 'success', 'kode' => '123']);
+            return response()->json(['status' => 'success', 'kode' => $transaksi->kode_transaksi]);
         } catch (Exception $e) {
             DB::rollBack();
             return response()->json(['status' => 'error', 'kode' => null, 'message' => $e->getMessage()], 201);
@@ -46,7 +46,7 @@ class PendaftaranController extends Controller
 
     public function handleTransaksi($request)
     {
-        $grup = count($request->grup);
+        $grup = $request->grup;
         return
             [
                 'kode_transaksi' => $this->generateKode(),

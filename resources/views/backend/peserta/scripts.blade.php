@@ -11,8 +11,8 @@
                 searchable: false
             },
             {
-                data: 'nama',
-                name: 'nama'
+                data: 'nama_peserta',
+                name: 'nama_peserta'
             },
             {
                 data: 'nik',

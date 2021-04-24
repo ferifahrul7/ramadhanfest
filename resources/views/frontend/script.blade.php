@@ -17,7 +17,20 @@
                 success: function(data) {
                     // alert('xx');
                     if (data.status == 'success') {
-                        alert('kode anda adalah :'+data.kode)
+
+                        swalWithBootstrapButtons.fire({
+                            title: 'Berhasil Mendaftar!',
+                            text: "Kode Pendaftaran Anda adalah " + data.kode,
+                            icon: 'true',
+                            confirmButtonText: 'Selesai!',
+                            reverseButtons: true
+                        }).then((result) => {
+                            if (result.value) {
+                                window.location.href = '/';
+                            }
+                        })
+                    } else {
+
                     }
                 },
                 error: function(xhr) {

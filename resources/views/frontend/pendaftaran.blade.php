@@ -39,7 +39,8 @@
     <link href="{{ asset('assets/frontend/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/frontend/vendor/venobox/venobox.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/frontend/vendor/aos/aos.css') }}" rel="stylesheet">
-
+    <!-- sweetalert2 -->
+    <link rel="stylesheet" href="{{ asset('assets/lib/sweetalert2/sweetalert2.min.css') }}">
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/frontend/css/style.css') }}" rel="stylesheet">
 
@@ -61,18 +62,18 @@
             <!-- Uncomment below if you prefer to use an image logo -->
             <a href="{{ route('welcome') }}" class="logo mr-auto"><img src="{{ asset('assets/img/logo/logo.png') }}" alt="" class="img-fluid"></a>
             <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li><a href="{{ route('welcome') }}">Home</a></li>
-          <li class="active"><a href="#">Pendaftaran</a></li>
+                <ul>
+                    <li><a href="{{ route('welcome') }}">Home</a></li>
+                    <li class="active"><a href="#">Pendaftaran</a></li>
 
-        </ul>
-      </nav><!-- .nav-menu -->
+                </ul>
+            </nav><!-- .nav-menu -->
 
         </div>
     </header><!-- End Header -->
 
     <main id="main">
-    @include('frontend._form')
+        @include('frontend._form')
     </main>
 
     <!-- ======= Footer ======= -->
@@ -113,7 +114,12 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/frontend/js/main.js') }}"></script>
-    
+
+  <!-- SweetAlert -->
+  <script src="{{ asset('assets/lib/sweetalert2/sweetalert2.min.js') }}"></script>
+  <!-- SweetAlert Config -->
+  <script src="{{ asset('assets/custom/js/sweetalert.js') }}"></script>
+
     @include('frontend.script')
 </body>
 
