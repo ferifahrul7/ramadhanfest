@@ -30,6 +30,13 @@
     </li>
 
     <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" href="{{ route('entry.out') }}">
+        <i class="c-sidebar-nav-icon fas fa-users"></i>
+        Cek Keluar Pengunjung
+      </a>
+    </li>
+
+    <li class="c-sidebar-nav-item">
       <a class="c-sidebar-nav-link" href="{{ route('peserta.index') }}">
         <i class="c-sidebar-nav-icon fas fa-users"></i>
         Data Peserta

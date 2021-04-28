@@ -36,6 +36,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin'], function () {
     //Entry (masuk)
     Route::get('entry-in','EntryController@entryIn')->name('entry.in');
     Route::get('entry-out','EntryController@entryOut')->name('entry.out');
+    Route::post('entry-out','EntryController@entryOutAction')->name('entry.out.post');
     Route::post('entry-in','EntryController@entryInAction')->name('entry.in.post');
     Route::post('entry-search','EntryController@entrySearch')->name('entry.search');
 

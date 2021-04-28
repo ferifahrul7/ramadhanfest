@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 @section('title')
-Cek Masuk Pengunjung
+Cek Keluar Pengunjung
 @endsection
 @section('content')
 <div class="container-fluid">
@@ -9,9 +9,9 @@ Cek Masuk Pengunjung
             <div class="col-12">
                 <div class="card">
                     <h4 class="card-header">
-                        Cek Masuk Pengunjung
+                        Cek Keluar Pengunjung
                     </h4>
-                    <form class="form-input" id="form-checkin">
+                    <form class="form-input" id="form-checkout">
                         <div class="card-body">
                             <div class="text-center">
                                 <label for="kode_pengunjung">Kode Pengunjung</label>
@@ -43,9 +43,9 @@ Cek Masuk Pengunjung
                             @include('backend.entry._table')
                         </div>
                         <div class="col-sm-12 d-flex justify-content-end my-3">
-                            <form action="{{ route('entry.in.post') }}" method="POST">
+                            <form action="{{ route('entry.out.post') }}" method="POST">
                                 @csrf
-                                <input type="hidden" name="type_search" id="type_search" value="in">
+                                <input type="hidden" name="type_search" id="type_search" value="out">
                                 <input type="hidden" id="kode_transaksi" name="kode_transaksi">
                                 <button class="btn btn-primary"><i class="fa fa-check"></i> Verifikasi</button>
                             </form>
@@ -58,5 +58,5 @@ Cek Masuk Pengunjung
 </div>
 @endsection
 @push('scripts')
-@include('backend.entry.script-in')
+@include('backend.entry.script-out')
 @endpush
