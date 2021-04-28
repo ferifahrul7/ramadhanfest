@@ -10,5 +10,13 @@ class TransaksiDetail extends Model
 
     protected $fillable = ['transaksi_id', 'peserta_id'];
     
-    
+    public function header()
+    {
+        return $this->belongsTo(Transaksi::class,'transaksi_id');
+    }
+
+    public function peserta()
+    {
+        return $this->belongsTo(Peserta::class,'peserta_id');
+    }
 }

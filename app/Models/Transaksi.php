@@ -10,4 +10,9 @@ class Transaksi extends Model
 
     protected $fillable = ['kode_transaksi', 'jenis_peserta', 'status', 'jumlah_peserta'];
 
+    public function detail()
+    {
+        return $this->hasMany(TransaksiDetail::class,'transaksi_id');
+    }
+
 }

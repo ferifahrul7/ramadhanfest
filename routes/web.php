@@ -33,6 +33,15 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin'], function () {
     Route::get('peserta-ajax', 'PesertaController@indexAjax');
     Route::delete('ajax/peserta/destroy', 'PesertaController@destroyAjax');
 
+    //Entry (masuk)
+    Route::get('entry-in','EntryController@entryIn')->name('entry.in');
+    Route::get('entry-out','EntryController@entryOut')->name('entry.out');
+    Route::post('entry-in','EntryController@entryInAction')->name('entry.in.post');
+    Route::post('entry-search','EntryController@entrySearch')->name('entry.search');
+
+    Route::post('transaksi-detail-get','TransaksiController@getByCode')->name('transaksi-detail.get');
+
+
     //user
     Route::resource('users', 'UserController');
     Route::get('roles/check/{id}', 'RoleController@check')->name('roles.check');

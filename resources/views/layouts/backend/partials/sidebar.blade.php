@@ -23,10 +23,16 @@
     <li class="c-sidebar-nav-title">Menu</li>
 
     <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" href="{{ route('entry.in') }}">
+        <i class="c-sidebar-nav-icon fas fa-users"></i>
+        Cek Masuk Pengunjung
+      </a>
+    </li>
+
+    <li class="c-sidebar-nav-item">
       <a class="c-sidebar-nav-link" href="{{ route('peserta.index') }}">
         <i class="c-sidebar-nav-icon fas fa-users"></i>
         Data Peserta
-        <span class="badge badge-info">NEW</span>
       </a>
     </li>
 
