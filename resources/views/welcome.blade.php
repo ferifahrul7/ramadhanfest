@@ -65,7 +65,7 @@
         <ul>
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#about">Tentang</a></li>
-          <li><a href="#steps">Teknis</a></li>
+          <li><a href="#steps">Petunjuk</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
