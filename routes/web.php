@@ -34,6 +34,11 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin'], function () {
     //roles
     Route::resource('roles', 'RoleController');
 
+
+    //aktivitas
+    Route::get('aktivitas-pengunjung', 'AktivitasController@index')->name('aktivitas.index');
+    Route::get('aktivitas-pengunjung-ajax', 'AktivitasController@indexAjax');
+
     //peserta
     Route::resource('peserta', 'PesertaController');
     Route::get('peserta-ajax', 'PesertaController@indexAjax');

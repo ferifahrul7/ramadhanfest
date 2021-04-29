@@ -8,10 +8,11 @@
     <thead class="bg-info">
         <tr>
             <th>#</th>
-            <th>NAMA PESERTA</th>
+            <th>NAMA PENGUNJUNG</th>
             <th>NIK</th>
-            <th>ALAMAT PESERTA</th>
+            <th>ALAMAT PENGUNJUNG</th>
             <th>NO HANDPHONE</th>
+            <th>KODE PENGUNJUNG</th>
             <th class="text-right">AKSI</th>
         </tr>
     </thead>

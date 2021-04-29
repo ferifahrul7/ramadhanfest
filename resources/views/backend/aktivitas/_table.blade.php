@@ -1,14 +1,17 @@
 @push('css')
 	@include('datatables.datatables-css')
 @endpush
-<table id="tabel-detail" class="table table-hover table-sm table-sm-responsive" style="width:100%">
+<div class="col-sm-12">
+    <div class="text-right" id="buttons"></div>
+</div>
+<table id="tabel-aktivitas" class="table table-hover table-sm table-sm-responsive" style="width:100%">
     <thead class="bg-info">
         <tr>
             <th>#</th>
             <th>NAMA PENGUNJUNG</th>
-            <th>NIK</th>
-            <th>ALAMAT PENGUNJUNG</th>
-            <th>NO HANDPHONE</th>
+            <th>WAKTU MASUK</th>
+            <th>WAKTU KELUAR</th>
+            <th>KODE PENGUNJUNG</th>
         </tr>
     </thead>
     <tbody>

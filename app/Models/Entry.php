@@ -9,4 +9,9 @@ class Entry extends Model
     protected $table = 'entry';
 
     protected $fillable = ['waktu_masuk','waktu_keluar','user_id','transaksi_id'];
+
+    public function transaksi()
+    {
+        return $this->belongsTo(Transaksi::class,'transaksi_id');
+    }
 }

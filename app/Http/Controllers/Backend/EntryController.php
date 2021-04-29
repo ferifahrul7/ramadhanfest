@@ -71,7 +71,7 @@ class EntryController extends BackendController
             }
             DB::commit();
             $this->callPusher();
-            $this->notif('success', 'Berhasil Menyimpan Kode Peserta, Peserta boleh masuk.');
+            $this->notif('success', 'Berhasil Menyimpan Kode Pengunjung, Pengunjung boleh masuk.');
             return redirect()->back();
         } catch (Exception $e) {
             dd($e->getMessage());
@@ -115,7 +115,7 @@ class EntryController extends BackendController
             }
             DB::commit();
             $this->callPusher();
-            $this->notif('success', 'Berhasil Menyimpan Kode Peserta, Peserta boleh keluar.');
+            $this->notif('success', 'Berhasil Menyimpan Kode Pengunjung, Pengunjung boleh keluar.');
             return redirect()->back();
         } catch (Exception $e) {
             $this->notif('error', $e->getMessage());

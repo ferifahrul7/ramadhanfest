@@ -39,7 +39,14 @@
     <li class="c-sidebar-nav-item">
       <a class="c-sidebar-nav-link" href="{{ route('peserta.index') }}">
         <i class="c-sidebar-nav-icon fas fa-users"></i>
-        Data Peserta
+        Data Pengunjung
+      </a>
+    </li>
+
+    <li class="c-sidebar-nav-item">
+      <a class="c-sidebar-nav-link" href="{{ route('aktivitas.index') }}">
+        <i class="c-sidebar-nav-icon fas fa-users"></i>
+        Data Aktivitas Pengunjung
       </a>
     </li>
 

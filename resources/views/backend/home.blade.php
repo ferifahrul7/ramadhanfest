@@ -9,7 +9,7 @@ Home
             <div class="col-4">
                 <div class="card bg-info text-light">
                     <div class="card-body">
-                        <h4 class="text-center">Jumlah Pengunjung yang belum masuk</h4>
+                        <h4 class="text-center">Jumlah Pengunjung belum masuk</h4>
                         <h1 id="pengunjung-daftar" class="text-center">{{ $pengunjung['daftar'] }}</h1>
                     </div>
                 </div>
@@ -17,7 +17,7 @@ Home
             <div class="col-4">
                 <div class="card bg-success text-light">
                     <div class="card-body">
-                        <h4 class="text-center">Jumlah Pengunjung yang berada di area festival</h4>
+                        <h4 class="text-center">Jumlah Pengunjung di area festival</h4>
                         <h1 id="pengunjung-in" class="text-center">{{ $pengunjung['in'] }}</h1>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ Home
             <div class="col-4">
                 <div class="card bg-warning text-light">
                     <div class="card-body">
-                        <h4 class="text-center">Jumlah Pengunjung yang sudah keluar</h4>
+                        <h4 class="text-center">Jumlah Pengunjung sudah keluar</h4>
                         <h1 id="pengunjung-out" class="text-center">{{ $pengunjung['out'] }}</h1>
                     </div>
                 </div>

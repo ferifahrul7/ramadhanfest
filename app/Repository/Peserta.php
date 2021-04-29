@@ -7,6 +7,6 @@ class Peserta
 {
     public function getPeserta($request)
     {
-        return Model::all();
+        return Model::with('transaksi_detail','transaksi_detail.header')->get();
     }
 }

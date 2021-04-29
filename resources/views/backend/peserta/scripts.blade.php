@@ -27,6 +27,10 @@
                 name: 'hp'
             },
             {
+                data: 'transaksi_detail.header.kode_transaksi',
+                name: 'transaksi_detail.header.kode_transaksi'
+            },
+            {
                 data: 'action',
                 name: 'action',
                 orderable: false,
@@ -56,7 +60,7 @@
                 className: 'btn btn-danger',
                 extend: 'pdf',
                 title: '',
-                messageTop: 'Data Peserta',
+                messageTop: 'Data Pengunjung',
                 exportOptions: {
                     columns: ':visible:Not(.not-exported)',
                     rows: ':visible'
@@ -67,7 +71,7 @@
                 className: 'btn btn-success',
                 extend: 'excel',
                 title: '',
-                messageTop: 'Data Peserta',
+                messageTop: 'Data Pengunjung',
                 exportOptions: {
                     columns: ':visible:Not(.not-exported)',
                     rows: ':visible'
@@ -78,7 +82,7 @@
                 className: 'btn btn-warning',
                 extend: 'print',
                 title: '',
-                messageTop: 'Data Peserta',
+                messageTop: 'Data Pengunjung',
                 exportOptions: {
                     columns: ':visible:Not(.not-exported)',
                     rows: ':visible'
