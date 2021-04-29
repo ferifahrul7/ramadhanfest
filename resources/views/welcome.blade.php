@@ -152,8 +152,8 @@
 
     <section id="counter" class="counter">
       <div class="container">
-        <div class="row no-gutter d-flex align-items-stretch">
-          <div class="col-4">
+        <div class="row d-flex align-items-stretch">
+          <div class="col-md-4 my-2">
             <div class="card bg-info text-light" data-aos="fade-right">
               <div class="card-body text-center">
                 <span class="text-center">Pengunjung belum masuk area</span>
@@ -161,7 +161,7 @@
               </div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 my-2">
             <div class="card bg-success text-light" data-aos="fade-right">
               <div class="card-body text-center">
                 <span class="text-center">Pengunjung berada di didalam area</span>
@@ -169,7 +169,7 @@
               </div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 my-2">
             <div class="card bg-warning text-light" data-aos="fade-right">
               <div class="card-body text-center">
                 <span class="text-center">Pengunjung sudah keluar</span>
