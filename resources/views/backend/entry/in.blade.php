@@ -16,9 +16,9 @@ Cek Masuk Pengunjung
                             <div class="text-center">
                                 <label for="kode_pengunjung">Kode Pengunjung</label>
                             </div>
-                            <div class="form-inline d-flex justify-content-center">
+                            <div class="d-flex justify-content-center">
                                 <!-- <div class="d-flex justify-content-center"> -->
-                                <input type="text" name="kode_pengunjung" id="kode_pengunjung" class="form-control form-control-lg border-dark">
+                                <input type="text" name="kode_pengunjung" id="kode_pengunjung" class="form-control form-control-lg col-sm-6 border-dark">
                                 <button type="button" class="btn btn-lg btn-primary mx-2" id="btn-cek-pengunjung">
                                     <i class="c-icon fa fa-search"></i>
                                 </button>

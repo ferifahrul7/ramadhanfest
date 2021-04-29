@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Backend\BackendController as Controller;
+use App\Models\Transaksi;
 
 class HomeController extends Controller
 {
@@ -24,6 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         $bcrum = $this->bcrum('Home');
-        return view('backend.home', compact('bcrum'));
+        $pengunjung = Transaksi::where('status','in')->sum('jumlah_peserta');
+        return view('backend.home', compact('bcrum','pengunjung'));
     }
 }

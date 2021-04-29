@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Events\PengunjungAction;
 use App\Http\Controllers\Controller;
 use App\Models\Entry;
 use App\Models\Transaksi;
@@ -68,11 +69,12 @@ class EntryController extends BackendController
                 $transaksi->status = 'in';
                 $transaksi->save();
             }
-
             DB::commit();
+            $this->callPusher();
             $this->notif('success', 'Berhasil Menyimpan Kode Peserta, Peserta boleh masuk.');
             return redirect()->back();
         } catch (Exception $e) {
+            dd($e->getMessage());
             $this->notif('error', $e->getMessage());
             DB::rollBack();
             return redirect()->back();
@@ -112,6 +114,7 @@ class EntryController extends BackendController
                 $transaksi->save();
             }
             DB::commit();
+            $this->callPusher();
             $this->notif('success', 'Berhasil Menyimpan Kode Peserta, Peserta boleh keluar.');
             return redirect()->back();
         } catch (Exception $e) {
@@ -119,5 +122,13 @@ class EntryController extends BackendController
             DB::rollBack();
             return redirect()->back();
         }
+    }
+
+    public function callPusher()
+    {
+        $jumlahDaftar = Transaksi::where('status','pendaftaran')->sum('jumlah_peserta');
+        $jumlahIn     = Transaksi::where('status','in')->sum('jumlah_peserta');
+        $jumlahOut    = Transaksi::where('status','out')->sum('jumlah_peserta');
+        return event(new PengunjungAction($jumlahDaftar,$jumlahIn,$jumlahOut));
     }
 }

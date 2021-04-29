@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Events\PengunjungAction;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PendaftaranRequest;
 use App\Models\Peserta;
@@ -36,6 +37,7 @@ class PendaftaranController extends Controller
             $transaksiDetail = TransaksiDetail::insert($transaksiDetailData);
 
             DB::commit();
+            $this->callPusher();
             return response()->json(['status' => 'success', 'kode' => $transaksi->kode_transaksi]);
         } catch (Exception $e) {
             DB::rollBack();
@@ -103,5 +105,13 @@ class PendaftaranController extends Controller
             }
         }
         return $data;
+    }
+
+    public function callPusher()
+    {
+        $jumlahDaftar = Transaksi::where('status','pendaftaran')->sum('jumlah_peserta');
+        $jumlahIn     = Transaksi::where('status','in')->sum('jumlah_peserta');
+        $jumlahOut    = Transaksi::where('status','out')->sum('jumlah_peserta');
+        return event(new PengunjungAction($jumlahDaftar,$jumlahIn,$jumlahOut));
     }
 }
