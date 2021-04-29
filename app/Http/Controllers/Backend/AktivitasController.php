@@ -19,7 +19,7 @@ class AktivitasController extends BackendController
     public function indexAjax(Request $request)
     {
         if ($request->ajax()) {
-            $data = Entry::with('transaksi', 'transaksi.detail', 'transaksi.detail.peserta');
+            $data = Entry::with('transaksi','user', 'transaksi.detail', 'transaksi.detail.peserta');
             return DataTables::of($data)
                 ->setRowId('idx')
                 ->editColumn('peserta.nama_peserta', function ($data) {

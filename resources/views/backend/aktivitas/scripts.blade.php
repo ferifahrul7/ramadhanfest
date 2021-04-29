@@ -27,6 +27,10 @@
                 data: 'transaksi.kode_transaksi',
                 name: 'transaksi.kode_transaksi'
             },
+            {
+                data: 'user.username',
+                name: 'user.username'
+            },
         ],
         "language": {
             "lengthMenu": "_MENU_ ",

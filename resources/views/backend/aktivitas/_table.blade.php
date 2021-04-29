@@ -12,6 +12,7 @@
             <th>WAKTU MASUK</th>
             <th>WAKTU KELUAR</th>
             <th>KODE PENGUNJUNG</th>
+            <th>ADMIN</th>
         </tr>
     </thead>
     <tbody>
