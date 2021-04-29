@@ -31,6 +31,10 @@
                 name: 'transaksi_detail.header.kode_transaksi'
             },
             {
+                data: 'transaksi_detail.header.status',
+                name: 'transaksi_detail.header.status'
+            },
+            {
                 data: 'action',
                 name: 'action',
                 orderable: false,

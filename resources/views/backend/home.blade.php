@@ -6,7 +6,7 @@ Home
 <div class="container-fluid">
     <div class="fade-in">
         <div class="row">
-            <div class="col-4">
+            <div class="col-md-4">
                 <div class="card bg-info text-light">
                     <div class="card-body">
                         <h4 class="text-center">Jumlah Pengunjung belum masuk</h4>
@@ -14,7 +14,7 @@ Home
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-4">
                 <div class="card bg-success text-light">
                     <div class="card-body">
                         <h4 class="text-center">Jumlah Pengunjung di area festival</h4>
@@ -22,7 +22,7 @@ Home
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-4">
                 <div class="card bg-warning text-light">
                     <div class="card-body">
                         <h4 class="text-center">Jumlah Pengunjung sudah keluar</h4>
