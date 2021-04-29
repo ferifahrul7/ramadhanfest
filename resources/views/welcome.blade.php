@@ -150,6 +150,37 @@
       </div>
     </section><!-- End About Section -->
 
+    <section id="counter" class="counter">
+      <div class="container">
+        <div class="row no-gutter d-flex align-items-stretch">
+          <div class="col-4">
+            <div class="card bg-info text-light" data-aos="fade-right">
+              <div class="card-body text-center">
+                <span class="text-center">Pengunjung belum masuk area</span>
+                <h1 id="pengunjung-daftar" class="text-center">{{ $pengunjung['daftar'] }}</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card bg-success text-light" data-aos="fade-right">
+              <div class="card-body text-center">
+                <span class="text-center">Pengunjung berada di didalam area</span>
+                <h1 id="pengunjung-in" class="text-center">{{ $pengunjung['in'] }}</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card bg-warning text-light" data-aos="fade-right">
+              <div class="card-body text-center">
+                <span class="text-center">Pengunjung sudah keluar</span>
+                <h1 id="pengunjung-out" class="text-center">{{ $pengunjung['out'] }}</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ======= Steps Section ======= -->
     <section id="steps" class="steps">
       <div class="container">
@@ -239,6 +270,34 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('assets/frontend/js/main.js') }}"></script>
+  <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+<script>
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher("{{ config('broadcasting.connections.pusher.key') }}", {
+        cluster: "{{ config('broadcasting.connections.pusher.options.cluster') }}"
+    });
+
+    var channel = pusher.subscribe('pengunjung-counter');
+    channel.bind('App\\Events\\PengunjungAction', function(data) {
+
+        $('#pengunjung-daftar').fadeOut(400, function() {
+            $('#pengunjung-daftar').text(data.jumlah_daftar);
+            $('#pengunjung-daftar').fadeIn(400);
+        });
+
+        $('#pengunjung-in').fadeOut(400, function() {
+            $('#pengunjung-in').text(data.jumlah_in);
+            $('#pengunjung-in').fadeIn(400);
+        });
+
+        $('#pengunjung-out').fadeOut(400, function() {
+            $('#pengunjung-out').text(data.jumlah_out);
+            $('#pengunjung-out').fadeIn(400);
+        });
+    });
+</script>
 
 </body>
 

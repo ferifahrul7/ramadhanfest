@@ -11,8 +11,14 @@
 |
 */
 
+use App\Models\Transaksi;
+
 Route::get('/', function () {
-    return view('welcome');
+
+    $pengunjung['in'] = Transaksi::where('status','in')->sum('jumlah_peserta');
+    $pengunjung['daftar'] = Transaksi::where('status','pendaftaran')->sum('jumlah_peserta');
+    $pengunjung['out'] = Transaksi::where('status','out')->sum('jumlah_peserta');
+    return view('welcome',compact('pengunjung'));
 })->name('welcome');
 
 Auth::routes();

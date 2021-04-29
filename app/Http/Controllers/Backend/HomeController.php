@@ -25,7 +25,9 @@ class HomeController extends Controller
     public function index()
     {
         $bcrum = $this->bcrum('Home');
-        $pengunjung = Transaksi::where('status','in')->sum('jumlah_peserta');
+        $pengunjung['in'] = Transaksi::where('status','in')->sum('jumlah_peserta');
+        $pengunjung['daftar'] = Transaksi::where('status','pendaftaran')->sum('jumlah_peserta');
+        $pengunjung['out'] = Transaksi::where('status','out')->sum('jumlah_peserta');
         return view('backend.home', compact('bcrum','pengunjung'));
     }
 }
