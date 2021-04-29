@@ -22,7 +22,7 @@ class AktivitasController extends BackendController
             $data = Entry::with('transaksi','user', 'transaksi.detail', 'transaksi.detail.peserta');
             return DataTables::of($data)
                 ->setRowId('idx')
-                ->editColumn('peserta.nama_peserta', function ($data) {
+                ->addColumn('nama_peserta', function ($data) {
                     $peserta = '';
                     foreach ($data->transaksi->detail as $detail) {
                         $peserta .=  $detail->peserta->nama_peserta . ', ';

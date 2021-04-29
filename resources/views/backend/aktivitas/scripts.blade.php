@@ -12,8 +12,8 @@
                 searchable: false
             },
             {
-                data: 'peserta.nama_peserta',
-                name: 'peserta.nama_peserta'
+                data: 'nama_peserta',
+                name: 'nama_peserta'
             },
             {
                 data: 'waktu_masuk',
